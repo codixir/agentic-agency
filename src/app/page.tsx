@@ -1,65 +1,160 @@
-import Image from "next/image";
+import { Hero } from "@/components/Hero";
+import { Section } from "@/components/Section";
+import { Card } from "@/components/Card";
+import { CaseStudyPreview } from "@/components/CaseStudyPreview";
+import { CTA } from "@/components/CTA";
+import { caseStudies } from "@/lib/caseStudies";
+import { buildMetadata } from "@/lib/seo";
+import { pageMeta } from "@/lib/pageMeta";
 
-export default function Home() {
+import { AgenticPipeline } from "@/components/diagrams/AgenticPipeline";
+
+export const metadata = buildMetadata(pageMeta.home);
+
+const services = [
+  {
+    title: "Agentic Application Development",
+    description:
+      "Architect, build, and launch AI copilots that respect IAM guardrails, tool budgets, and real-world SLAs.",
+  },
+  {
+    title: "Knowledge & RAG Systems",
+    description:
+      "Corpus ingest, retrieval evaluation, and orchestration logic that keeps answers trustworthy across domains.",
+  },
+  {
+    title: "AI Features for SaaS Products",
+    description:
+      "Ship net-new product surfaces that embed agentic tasks directly into the workflows your users already trust.",
+  },
+  {
+    title: "Cloud Architecture for AI",
+    description:
+      "Terraform-backed infrastructure, infra cost controls, and MLOps automation for compliant deployments.",
+  },
+  {
+    title: "Architecture & Delivery Rescue",
+    description:
+      "Recover projects stuck in demo-land with architecture reviews, playbooks, and incremental release plans.",
+  },
+];
+
+const failureModes = [
+  {
+    title: "Authentication and permissions are ignored",
+    description: "Agents inherit a single API key, so entitlements vanish and the system cannot prove who saw which data.",
+  },
+  {
+    title: "Retrieval quality isn’t evaluated",
+    description: "No golden datasets, no replay harnesses, and no alerts when recall drifts from week to week.",
+  },
+  {
+    title: "Tool usage lacks constraints",
+    description: "Shared credentials and unbounded budgets turn proof-of-concepts into security incidents overnight.",
+  },
+  {
+    title: "No observability or cost controls",
+    description: "Executives see a demo but ops teams never get traces, dashboards, or cost guardrails to keep the system alive.",
+  },
+  {
+    title: "Demos are built without production realities in mind",
+    description: "There are no architecture docs, no milestone plans, and no async updates, so projects stall for months.",
+  },
+];
+
+const workPrinciples = [
+  {
+    title: "Clear milestones",
+    description: "Stakeholders sign off within days because we share docs, acceptance criteria, and demo sandboxes frequently.",
+  },
+  {
+    title: "Architecture first",
+    description: "Architecture docs precede build so IAM, tool choices, and data contracts are clear before sprint one.",
+  },
+  {
+    title: "Incremental delivery",
+    description: "We run measurable checkpoints across data, runtime, and UX to de-risk before launch reviews.",
+  },
+  {
+    title: "Minimal meetings",
+    description: "Async memos and Loom walkthroughs keep executives in the loop without bloated standing calls.",
+  },
+  {
+    title: "Dedicated lead",
+    description: "You partner with a senior technical lead who codes, architects, and narrates trade-offs through delivery.",
+  },
+  {
+    title: "Elastic collaborators",
+    description: "Specialists join only when needed, so you never pay for idle bandwidth.",
+  },
+];
+
+export default function HomePage() {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+    <div className="space-y-16 pb-16">
+      <Hero />
+      <Section className="text-center">
+        <p className="text-base text-slate-300">
+          Experience delivering enterprise-grade systems across healthcare, finance, media, education, and technology organizations.
+        </p>
+        <p className="mt-4 text-base text-slate-300">
+          Built with modern cloud infrastructure (GCP, AWS), secure authentication (OIDC, IAM), and scalable front-end and back-end architectures.
+        </p>
+      </Section>
+      <Section
+        eyebrow="Blueprint"
+        title="How agentic workstreams stay governed"
+        description="Identity flows with the request, orchestration enforces guardrails, and tools execute with audit-ready context. The diagram below mirrors how we stage build-outs for new clients."
+      >
+        <div className="rounded-3xl border border-white/10 bg-white/5 p-6">
+          <AgenticPipeline />
         </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
+      </Section>
+
+      <Section id="why" title="Why most agentic apps fail" className="bg-white/5">
+        <div className="grid gap-6 md:grid-cols-2">
+          {failureModes.map((item) => (
+            <Card key={item.title} title={item.title} description={item.description} />
+          ))}
         </div>
-      </main>
+        <p className="mt-8 text-lg font-semibold text-white">
+          We build systems designed to survive real users, real data, and real scale.
+        </p>
+      </Section>
+
+      <Section id="services" eyebrow="Services" title="Where we create leverage">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+          {services.map((service) => (
+            <Card key={service.title} title={service.title} description={service.description} />
+          ))}
+        </div>
+        <p className="mt-6 text-sm font-semibold uppercase tracking-[0.3em] text-slate-400">
+          Typical engagements: 4–12 weeks. Async-first by default.
+        </p>
+      </Section>
+
+      <Section id="work" eyebrow="Selected work" title="Case studies rooted in outcomes">
+        <div className="grid gap-6 md:grid-cols-2">
+          {caseStudies.map((study) => (
+            <CaseStudyPreview key={study.slug} study={study} />
+          ))}
+        </div>
+      </Section>
+
+      <Section
+        id="process"
+        eyebrow="How we work"
+        title="Async-first by default."
+        description="We run cohesive delivery loops that respect your stakeholders’ time and the realities of enterprise governance."
+      >
+        <div className="grid gap-5 md:grid-cols-2">
+          {workPrinciples.map((principle) => (
+            <Card key={principle.title} title={principle.title} description={principle.description} />
+          ))}
+        </div>
+      </Section>
+
+      <CTA />
     </div>
   );
 }
