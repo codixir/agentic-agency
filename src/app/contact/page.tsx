@@ -24,7 +24,11 @@ export default function ContactPage() {
               <li>Clear proposal with milestones, scope, and responsible collaborators.</li>
             </ul>
             <p className="mt-6 text-sm text-slate-400">
-              Email us directly at <a className="text-sky-300" href="mailto:hello@yourdomain.com">hello@yourdomain.com</a>.
+              We keep every submission confidential and respond personally within two business days. Email us directly at {" "}
+              <a className="text-sky-300" href="mailto:hello@yourdomain.com">
+                hello@yourdomain.com
+              </a>
+              .
             </p>
           </div>
         </div>

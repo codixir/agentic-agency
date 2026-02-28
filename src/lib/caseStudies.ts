@@ -7,7 +7,7 @@ export type CaseStudy = {
   challenge: string;
   approach: string[];
   outcomes: string[];
-  metrics: string[];
+  impacts: string[];
   stack: string[];
   services: string[];
 };
@@ -19,7 +19,7 @@ export const caseStudies: CaseStudy[] = [
     industry: "Healthcare",
     engagementLength: "10 weeks",
     summary:
-      "Designed an intake co-pilot that orchestrates eligibility checks, consent capture, and secure note generation across HIPAA-governed APIs.",
+      "Derived from the generative-AI intake work Mike led at SADA: an orchestrator that handles eligibility, consent, and secure note generation across HIPAA-governed APIs.",
     challenge:
       "Nurses were juggling four legacy systems, manual permissions, and time-consuming note templates before patients were even seen.",
     approach: [
@@ -32,10 +32,10 @@ export const caseStudies: CaseStudy[] = [
       "Cost alerts tuned fine-tuned model usage based on shift volume.",
       "Clinicians received explainable summaries routed to EHR inboxes.",
     ],
-    metrics: [
-      "~30–50% faster intake packet creation",
-      "~40–60% reduction in idle time between queues",
-      "Increased adoption and repeat usage"
+    impacts: [
+      "Condensed nurse intake from four tools to one orchestrated workspace",
+      "Surfaced HIPAA audit events and IAM traces inside every note",
+      "Clinicians adopted the co-pilot for every protected-health workflow",
     ],
     stack: ["Next.js", "LangChain", "Vertex AI", "Workflows"],
     services: [
@@ -50,7 +50,7 @@ export const caseStudies: CaseStudy[] = [
     industry: "Financial Services",
     engagementLength: "8 weeks",
     summary:
-      "Implemented a retrieval governance layer that balances vector search, classical search, and structured data when composing research briefs.",
+      "Modeled after the retrieval governance work Mike ran for fintech teams: a system that balances vector search, keyword retrieval, and structured data when composing research briefs.",
     challenge:
       "Analysts needed faster answers but compliance teams required deterministic audit trails and revocable entitlements.",
     approach: [
@@ -62,10 +62,10 @@ export const caseStudies: CaseStudy[] = [
       "Research teams trusted the summaries because sources and IAM context shipped with each answer.",
       "Compliance gained exportable audit packs for regulator reviews.",
     ],
-    metrics: [
-      "~35–45% faster brief assembly",
-      "~25–35% reduction in manual fact checks",
-      "Increased adoption and repeat usage"
+    impacts: [
+      "Compliance teams gained exportable IAM-backed audit packs",
+      "Analysts trusted summaries because citations shipped with IAM context",
+      "Runbooks turned retrieval drift remediation into a scheduled task",
     ],
     stack: ["Next.js", "OpenSearch", "AWS Kendra", "Step Functions"],
     services: [
@@ -80,7 +80,7 @@ export const caseStudies: CaseStudy[] = [
     industry: "Media",
     engagementLength: "6 weeks",
     summary:
-      "Built an async operations layer that triages inbound tasks, enriches metadata, and hands off confident actions to human reviewers.",
+      "Inspired by scaling React/Node operations at Flybits: an async layer that triages inbound tasks, enriches metadata, and hands off confident actions to human reviewers.",
     challenge:
       "An internal tools team faced escalating ticket queues because prior experiments failed to integrate with change management workflows.",
     approach: [
@@ -92,10 +92,10 @@ export const caseStudies: CaseStudy[] = [
       "On-call engineers received structured diagnostics with each alert.",
       "Leaders could prove ROI through cost-per-action dashboards.",
     ],
-    metrics: [
-      "~30–50% reduction in manual queue touch time",
-      "~20–30% decrease in after-hours pages",
-      "Increased adoption and repeat usage"
+    impacts: [
+      "Operators received structured diagnostics with every escalated alert",
+      "Leaders proved ROI through per-action cost dashboards",
+      "Review teams trusted automation thanks to traceable guardrails",
     ],
     stack: ["Next.js", "Temporal", "OpenAI", "Datadog"],
     services: [

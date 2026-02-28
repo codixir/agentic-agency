@@ -33,7 +33,7 @@ export default function AboutPage() {
         description="We built Ioxir because enterprises need more than demos. They need a partner that can carry agentic systems from executive whiteboards through production readiness."
       >
         <p className="text-base text-slate-300">
-          Founded by Mike Lawson, a senior engineer with 9+ years of experience building enterprise-grade systems, we partner directly with product, operations, and security leads to make sure AI initiatives land. Mike led infrastructure and application teams inside healthcare, media, and fintech organizations before launching Ioxir. That background informs how we design every engagement: architecture-first, observability-rich, and focused on measurable impact.
+          Founded by Mike Lawson, a senior engineer with 9+ years of experience building enterprise-grade systems, we partner directly with product, operations, and security leads to make sure AI initiatives land. Mike led the launch of a generative AI application platform at SADA, introduced React and GraphQL delivery patterns at Flybits, and previously built high-throughput SMS onboarding flows for fintech teams. That background informs how we design every engagement: architecture-first, observability-rich, and focused on measurable impact.
         </p>
         <p className="mt-6 text-base text-slate-300">
           For larger engagements, we assemble specialized collaborators across AI engineering, cloud infrastructure, and UX. Each collaborator joins with clearly defined scopes and leaves when that scope is complete, keeping the team lean without sacrificing depth.

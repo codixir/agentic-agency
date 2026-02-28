@@ -20,9 +20,9 @@ export default function CaseStudiesPage() {
           {caseStudies.map((study) => (
             <Card key={study.slug} title={study.title} description={study.summary}>
               <div className="mt-4 flex flex-wrap gap-2 text-xs text-slate-400">
-                {study.metrics.map((metric) => (
-                  <span key={metric} className="rounded-full border border-white/10 px-3 py-1">
-                    {metric}
+                {study.impacts.map((impact) => (
+                  <span key={impact} className="rounded-full border border-white/10 px-3 py-1">
+                    {impact}
                   </span>
                 ))}
               </div>

@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
-import { CTA } from "@/components/CTA";
 import { buildMetadata } from "@/lib/seo";
 import { pageMeta } from "@/lib/pageMeta";
 import { listPosts } from "@/lib/posts";
@@ -86,7 +85,21 @@ export default async function LlmObservabilityPage() {
         </div>
       </Section>
 
-      <CTA />
+      <Section title="Instrument your agent stack">
+        <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-slate-200">
+          <p>
+            Bring us your existing traces and dashboards. We will map the gaps across prompts, tools, and cost controls and send back an observability plan you can plug into Grafana, Datadog, or OpenTelemetry.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-4">
+            <Link href="/contact" className="rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-white">
+              Request an observability audit
+            </Link>
+            <Link href="/blog/evaluating-retrieval-quality" className="text-sm font-semibold text-sky-300">
+              Read about evaluation loops ↗
+            </Link>
+          </div>
+        </div>
+      </Section>
     </div>
   );
 }

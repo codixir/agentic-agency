@@ -95,10 +95,10 @@ export default function HomePage() {
       <Hero />
       <Section className="text-center">
         <p className="text-base text-slate-300">
-          Experience delivering enterprise-grade systems across healthcare, finance, media, education, and technology organizations.
+          Led generative AI platforms at SADA, shipped React ecosystems at Flybits, and delivered regulated onboarding flows for fintech teams.
         </p>
         <p className="mt-4 text-base text-slate-300">
-          Built with modern cloud infrastructure (GCP, AWS), secure authentication (OIDC, IAM), and scalable front-end and back-end architectures.
+          That experience translates into engagements where IAM, observability, and delivery guardrails are present from day one.
         </p>
       </Section>
       <Section
@@ -118,7 +118,7 @@ export default function HomePage() {
           ))}
         </div>
         <p className="mt-8 text-lg font-semibold text-white">
-          We build systems designed to survive real users, real data, and real scale.
+          We build launch plans grounded in IAM, evaluation, and guardrails so production never feels like an afterthought.
         </p>
       </Section>
 

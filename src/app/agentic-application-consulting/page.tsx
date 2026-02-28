@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
-import { CTA } from "@/components/CTA";
 import { buildMetadata } from "@/lib/seo";
 import { pageMeta } from "@/lib/pageMeta";
 import { listPosts } from "@/lib/posts";
@@ -108,7 +107,22 @@ export default async function AgenticApplicationConsultingPage() {
         </div>
       </Section>
 
-      <CTA />
+      <Section title="Start with an architecture review">
+        <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-slate-200">
+          <p>
+            Share the workflows you want to automate and we will respond with a documented architecture sketch—IAM flows, observability plan, and the delivery risks we see.
+            It is the same process used while launching enterprise agent platforms at SADA and Flybits.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-4">
+            <Link href="/contact" className="rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-white">
+              Book architecture review
+            </Link>
+            <Link href="/blog/why-agentic-apps-fail" className="text-sm font-semibold text-sky-300">
+              Read how we harden agentic apps ↗
+            </Link>
+          </div>
+        </div>
+      </Section>
     </div>
   );
 }

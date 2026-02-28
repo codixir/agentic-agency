@@ -1,7 +1,6 @@
 import Link from "next/link";
 import { Section } from "@/components/Section";
 import { Card } from "@/components/Card";
-import { CTA } from "@/components/CTA";
 import { buildMetadata } from "@/lib/seo";
 import { pageMeta } from "@/lib/pageMeta";
 import { listPosts } from "@/lib/posts";
@@ -97,7 +96,21 @@ export default async function RagSystemsPage() {
           ))}
         </div>
       </Section>
-      <CTA />
+      <Section title="Workshop your retrieval plan">
+        <div className="rounded-3xl border border-white/10 bg-white/5 p-6 text-slate-200">
+          <p>
+            We can review your corpus map, ingest plan, and evaluation harness in a short working session. You walk away with a prioritized checklist covering connectors, IAM, and success metrics.
+          </p>
+          <div className="mt-6 flex flex-wrap gap-4">
+            <Link href="/contact" className="rounded-full bg-sky-500 px-6 py-3 text-sm font-semibold text-white">
+              Request a retrieval review
+            </Link>
+            <Link href="/blog/production-rag-checklist" className="text-sm font-semibold text-sky-300">
+              Read the RAG checklist ↗
+            </Link>
+          </div>
+        </div>
+      </Section>
     </div>
   );
 }

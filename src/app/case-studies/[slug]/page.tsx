@@ -37,9 +37,9 @@ export default function CaseStudyDetailPage({ params }: { params: { slug: string
       >
         <p className="text-base text-slate-300">{study.summary}</p>
         <div className="mt-6 flex flex-wrap gap-2 text-xs text-slate-400">
-          {study.metrics.map((metric) => (
-            <span key={metric} className="rounded-full border border-white/10 px-3 py-1">
-              {metric}
+          {study.impacts.map((impact) => (
+            <span key={impact} className="rounded-full border border-white/10 px-3 py-1">
+              {impact}
             </span>
           ))}
         </div>
