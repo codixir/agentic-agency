@@ -7,6 +7,8 @@ import { buildMetadata } from "@/lib/seo";
 import { pageMeta } from "@/lib/pageMeta";
 
 export const metadata = buildMetadata(pageMeta.blog);
+export const dynamic = "force-static";
+export const revalidate = false;
 
 export default async function BlogPage() {
   const posts = await listPosts();

@@ -9,6 +9,8 @@ export async function generateStaticParams() {
   return caseStudies.map((study) => ({ slug: study.slug }));
 }
 
+export const dynamicParams = false;
+
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   const study = getCaseStudyBySlug(params.slug);
   if (!study) {

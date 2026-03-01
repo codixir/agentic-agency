@@ -10,6 +10,9 @@ export async function generateStaticParams() {
   return slugs.map((slug) => ({ slug }));
 }
 
+export const dynamicParams = false;
+export const revalidate = false;
+
 export async function generateMetadata({ params }: { params: { slug: string } }) {
   try {
     const post = await getPostBySlug(params.slug);
